@@ -24,25 +24,25 @@ npm install mapmyindia-react --save
 import Map from "mapmyindia-react";
 
 class App extends React.Component {
-	 render () {
-		 return (
-		 	 <Map
-                markers={[
-                    {
-                        position: [18.5314, 73.845],
-                        draggable: true,
-                        title: "Marker title",
-                        onClick: e => {
-                            console.log("clicked ");
-                        },
-                        onDragend: e => {
-                            console.log("dragged");
-                        }
-                    }
-                ]}
-          />
-		 )
-	 }
+  render() {
+    return (
+      <Map
+        markers={[
+          {
+            position: [18.5314, 73.845],
+            draggable: true,
+            title: "Marker title",
+            onClick: e => {
+              console.log("clicked ");
+            },
+            onDragend: e => {
+              console.log("dragged");
+            }
+          }
+        ]}
+      />
+    );
+  }
 }
 
 ```
@@ -76,9 +76,8 @@ Example for marker array
 
 ```
 
-
  Map events
-| Event          |      default value |
+| Event         |      default value |
 | ------------- | :-----------:    |
 | onResize| () => {} |
 | onZoom| () => {} |
