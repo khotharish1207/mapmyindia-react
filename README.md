@@ -76,7 +76,9 @@ Example for marker array
 
 ```
 
- Map events
+ #### Map events
+
+
 | Event         |      default value |
 | ------------- | :-----------:    |
 | onResize| () => {} |
