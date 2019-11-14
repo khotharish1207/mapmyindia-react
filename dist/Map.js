@@ -76,6 +76,8 @@ function (_React$Component) {
           onMouseout = _this$props.onMouseout,
           onKeypress = _this$props.onKeypress;
       var timer = setInterval(function () {
+        var tried = 0;
+
         if (MapmyIndia && MapmyIndia.Map) {
           clearInterval(timer);
           /**
@@ -107,6 +109,9 @@ function (_React$Component) {
           onMouseover && _this.map.addEventListener("mouseover", onMouseover);
           onMove && _this.map.addEventListener("move", onMove);
           onMouseup && _this.map.addEventListener("mouseup", onMouseup);
+        } else {
+          tried++;
+          tried === 1500 && clearInterval(timer);
         }
       }, 100);
     });

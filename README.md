@@ -1,4 +1,4 @@
-# MapmyIndia-react
+# MapmyIndia react
 
 React component to implement [MapmyIndia Interactive Map API](https://www.mapmyindia.com/api/advanced-maps/doc/interactive-map-api)
 
@@ -24,45 +24,45 @@ npm install mapmyindia-react --save
 import Map from "mapmyindia-react";
 
 class App extends React.Component {
-  render() {
-    return (
-      <Map
-        markers={[
-          {
-            position: [18.5314, 73.845],
-            draggable: true,
-            title: "Marker title",
-            onClick: e => {
-              console.log("clicked ");
-            },
-            onDragend: e => {
-              console.log("dragged");
-            }
-          }
-        ]}
-      />
-    );
-  }
+	 render () {
+		 return (
+		 	 <Map
+          markers={[
+              {
+                  position: [18.5314, 73.845],
+                  draggable: true,
+                  title: "Marker title",
+                  onClick: e => {
+                      console.log("clicked ");
+                  },
+                  onDragend: e => {
+                      console.log("dragged");
+                  }
+              }
+          ]}
+          />
+		 )
+	 }
 }
 
 ```
 
 ### Props
 
-| prop          | type    | default value |
-| ------------- | ------- |:-----------:    |
-|  center       | array   |[18.5314, 73.8446]  |
-|  zoomControl  | bool    | true          |
-|  location     | bool    | true          |
-|  height       |string   |500px          |
-|  width        | string  |               |
-|  zoom         | number  |15             |
-|  hybrid       | bool    | true          |
-|  search       | bool    |   true        |
-| markers       | array   | []            |
-
+| prop        | type   |   default value    |
+| ----------- | ------ | :----------------: |
+| center      | array  | [18.5314, 73.8446] |
+| zoomControl | bool   |        true        |
+| location    | bool   |        true        |
+| height      | string |       500px        |
+| width       | string |                    |
+| zoom        | number |         15         |
+| hybrid      | bool   |        true        |
+| search      | bool   |        true        |
+| markers     | array  |         []         |
 
 Example for marker array
+
 ```
   [
     {
@@ -76,26 +76,23 @@ Example for marker array
 
 ```
 
- #### Map events
-
-
-| Event         |      default value |
-| ------------- | :-----------:    |
+Map events
+| Event | default value |
+| ------------- | :-----------: |
 | onResize| () => {} |
 | onZoom| () => {} |
 | onMove| () => {} |
 | onClick| () => {} |
 | onDblclick| () => {} |
-| onMousedown| () => {} |
 | onMouseup| () => {} |
 | onMousedown| () => {} |
 | onMouseover| () => {} |
 | onMouseout| () => {} |
 | onKeypress| () => {} |
 
-## Authors
+## Author
 
-- **Harish khot** 
+- **Harish S Khot**
 
 ## Acknowledgments
 
