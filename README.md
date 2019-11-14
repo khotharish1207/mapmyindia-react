@@ -77,8 +77,9 @@ Example for marker array
 ```
 
 Map events
-| Event | default value |
-| ------------- | :-----------: |
+
+| Event         |      default value |
+| ------------- | :-----------:    |
 | onResize| () => {} |
 | onZoom| () => {} |
 | onMove| () => {} |
