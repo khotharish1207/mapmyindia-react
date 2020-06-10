@@ -99,6 +99,7 @@ export default class Map extends React.Component {
         this.map.addLayer(mk);
 
         this.markers.push(mk);
+        this.map.setView(mk.getLatLng());
       }
     });
   };
