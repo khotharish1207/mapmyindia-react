@@ -37,7 +37,9 @@ export default class Map extends React.Component {
       onMouseup,
       onMouseover,
       onMouseout,
-      onKeypress
+      onKeypress,
+
+      onMapLoad
     } = this.props;
     const timer = setInterval(() => {
       let tried = 0;
@@ -70,6 +72,8 @@ export default class Map extends React.Component {
         onMouseover && this.map.addEventListener("mouseover", onMouseover);
         onMove && this.map.addEventListener("move", onMove);
         onMouseup && this.map.addEventListener("mouseup", onMouseup);
+
+        onMapLoad && onMapLoad(this.map)
       } else {
         tried++;
         tried === 1500 && clearInterval(timer);
@@ -99,6 +103,7 @@ export default class Map extends React.Component {
         this.map.addLayer(mk);
 
         this.markers.push(mk);
+        this.map.setView(mk.getLatLng());
       }
     });
   };

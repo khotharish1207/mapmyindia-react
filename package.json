@@ -1,6 +1,6 @@
 {
   "name": "mapmyindia-react",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React map component for mapmyIndia (https://www.mapmyindia.com/api/advanced-maps/doc/interactive-map-api)",
   "main": "dist/index.js",
   "scripts": {
@@ -22,15 +22,17 @@
     "Interactive Map"
   ],
   "dependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-proposal-class-properties": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.2",
-    "babel-plugin-transform-class-properties": "^6.24.1",
     "lodash.isequal": "^4.5.0",
     "prop-types": "^15.7.2",
     "react": "^16.10.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.1",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.5",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-class-properties": "^6.24.1"
   }
 }
