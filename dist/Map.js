@@ -235,6 +235,7 @@ Map.propTypes = {
   onMouseover: _propTypes["default"].func,
   onMouseout: _propTypes["default"].func,
   onKeypress: _propTypes["default"].func,
+  onMapLoad: _propTypes["default"].func,
   // Markers
   markers: _propTypes["default"].array
 };

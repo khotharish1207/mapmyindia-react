@@ -155,6 +155,7 @@ Map.propTypes = {
   onMouseover: PropTypes.func,
   onMouseout: PropTypes.func,
   onKeypress: PropTypes.func,
+  onMapLoad: PropTypes.func,
 
   // Markers
   markers: PropTypes.array

@@ -4,6 +4,8 @@ React component to implement [MapmyIndia Interactive Map API](https://www.mapmyi
 
 ## Getting Started
 
+demo: https://mapmyindia-react-example.herokuapp.com/
+
 ### Prerequisites
 
 Integrate interactive maps from MapmyIndia into your browser application by simply including MapmyIndia's interactive map API in your script source in the head section.
@@ -90,6 +92,7 @@ Map events
 | onMouseover| () => {} |
 | onMouseout| () => {} |
 | onKeypress| () => {} |
+| onMapLoad| (mapObject) => {} |
 
 ## Author
 
