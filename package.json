@@ -1,6 +1,6 @@
 {
   "name": "react-mapmyindia",
-  "version": "1.1.19",
+  "version": "2.0.0",
   "description": "React map component for mapmyIndia (https://www.mapmyindia.com/api/advanced-maps/doc/interactive-map-api)",
   "main": "dist/index.js",
   "scripts": {
