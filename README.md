@@ -43,7 +43,7 @@ Integrate interactive maps from MapmyIndia into your browser application by simp
 ### Installing
 
 ```
-npm install react-mapmyindia --save
+npm install mapmyindia-react-custom-icon --save
 ```
 
 ### How to use
