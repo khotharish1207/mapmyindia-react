@@ -1,19 +1,19 @@
 {
-  "name": "mapmyindia-react-custom-icon",
-  "version": "1.0.9",
+  "name": "mapmyindia-react-custom-icons",
+  "version": "1.0.10",
   "description": "React map component for mapmyIndia (https://www.mapmyindia.com/api/advanced-maps/doc/interactive-map-api)",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",
     "build-watch": "babel src -d dist --watch"
   },
-  "author": "harish khot",
+  "author": "ManideepYelugoti",
   "repository": {
     "type": "git",
     "url": "https://github.com/Manideep-Chaitanya/mapmyindia-react.git"
   },
   "bugs": {
-    "url": "https://github.com/khotharish1207/mapmyindia-react/issues"
+    "url": "https://github.com/Manideep-Chaitanya/mapmyindia-react.git"
   },
   "keywords": [
     "mapmyindia",
