@@ -221,7 +221,7 @@ Map.defaultProps = {
   location: true,
   search: true,
   zoom: 15,
-  height: "500px",
+  height: "100%",
   width: "100%",
   markers: []
 };
