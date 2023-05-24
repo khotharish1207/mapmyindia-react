@@ -2,6 +2,32 @@
 
 React component to implement [MapmyIndia Interactive Map API](https://www.mapmyindia.com/api/advanced-maps/doc/interactive-map-api)
 
+### credits
+
+Please refer @khotharish1207 (https://github.com/khotharish1207/mapmyindia-react) for original Repo
+I have just Modified below part of the code so that user can add Custom icons (dist/Map.js)
+
+```
+ var icon=L.divIcon(
+        { className: "custom icon",
+        html: ReactDOMServer.renderToString(m.icon_url) })
+
+      var mk = new L.Marker(position, {
+      draggable: draggable,
+      title: title,
+      icon:icon
+    });
+    title && mk.bindPopup(title);
+    onDragend && mk.on("dragend", onDragend);
+    onClick && mk.on("click", onClick);
+    _this.map.addLayer(mk);
+
+    _this.markers.push(mk);
+
+    _this.map.setView(mk.getLatLng());
+
+```
+
 ## Getting Started
 
 demo: https://mapmyindia-react-example.herokuapp.com/
@@ -80,19 +106,19 @@ Example for marker array
 
 Map events
 
-| Event         |      default value |
-| ------------- | :-----------:    |
-| onResize| () => {} |
-| onZoom| () => {} |
-| onMove| () => {} |
-| onClick| () => {} |
-| onDblclick| () => {} |
-| onMouseup| () => {} |
-| onMousedown| () => {} |
-| onMouseover| () => {} |
-| onMouseout| () => {} |
-| onKeypress| () => {} |
-| onMapLoad| (mapObject) => {} |
+| Event       |   default value   |
+| ----------- | :---------------: |
+| onResize    |     () => {}      |
+| onZoom      |     () => {}      |
+| onMove      |     () => {}      |
+| onClick     |     () => {}      |
+| onDblclick  |     () => {}      |
+| onMouseup   |     () => {}      |
+| onMousedown |     () => {}      |
+| onMouseover |     () => {}      |
+| onMouseout  |     () => {}      |
+| onKeypress  |     () => {}      |
+| onMapLoad   | (mapObject) => {} |
 
 ## Author
 
