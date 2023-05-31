@@ -143,6 +143,7 @@ var Map = /*#__PURE__*/function (_React$Component) {
           var position = m.position,
               draggable = m.draggable,
               title = m.title,
+              tooltip = m.title,
               // icon = m.icon_url,
               onClick = m.onClick,
               onDragend = m.onDragend;
@@ -160,7 +161,19 @@ var Map = /*#__PURE__*/function (_React$Component) {
             title: title,
             icon:icon
           });
-          title && mk.bindPopup(title);
+
+          if (title) {
+            var titleContent = ReactDOMServer.renderToStaticMarkup(title);
+            mk.bindPopup(titleContent);
+          }
+
+           if (tooltip) {
+      var tooltipContent = ReactDOMServer.renderToStaticMarkup(tooltip);
+      mk.bindTooltip(tooltipContent);
+    }
+
+          
+
           onDragend && mk.on("dragend", onDragend);
           onClick && mk.on("click", onClick);
           _this.map.addLayer(mk);

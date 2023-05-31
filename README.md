@@ -120,9 +120,20 @@ Map events
 | onKeypress  |     () => {}      |
 | onMapLoad   | (mapObject) => {} |
 
+
+## Updates
+
+Now you can Pass Html elements or react components to the title prop of marker 
+```
+title: <h4>{marker title}</h4>
+```
+
 ## Author
 
 - **Harish S Khot**
+
+## Updated by 
+- **Manideep Yelugoti**
 
 ## Acknowledgments
 
