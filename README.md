@@ -2,6 +2,32 @@
 
 React component to implement [MapmyIndia Interactive Map API](https://www.mapmyindia.com/api/advanced-maps/doc/interactive-map-api)
 
+### credits
+
+Please refer @khotharish1207 (https://github.com/khotharish1207/mapmyindia-react) for original Repo
+I have just Modified below part of the code so that user can add Custom icons (dist/Map.js)
+
+```
+ var icon=L.divIcon(
+        { className: "custom icon",
+        html: ReactDOMServer.renderToString(m.icon_url) })
+
+      var mk = new L.Marker(position, {
+      draggable: draggable,
+      title: title,
+      icon:icon
+    });
+    title && mk.bindPopup(title);
+    onDragend && mk.on("dragend", onDragend);
+    onClick && mk.on("click", onClick);
+    _this.map.addLayer(mk);
+
+    _this.markers.push(mk);
+
+    _this.map.setView(mk.getLatLng());
+
+```
+
 ## Getting Started
 
 demo: https://mapmyindia-react-example.herokuapp.com/
@@ -17,7 +43,7 @@ Integrate interactive maps from MapmyIndia into your browser application by simp
 ### Installing
 
 ```
-npm install mapmyindia-react --save
+npm install mapmyindia-react-custom-icons --save
 ```
 
 ### How to use
@@ -80,23 +106,34 @@ Example for marker array
 
 Map events
 
-| Event         |      default value |
-| ------------- | :-----------:    |
-| onResize| () => {} |
-| onZoom| () => {} |
-| onMove| () => {} |
-| onClick| () => {} |
-| onDblclick| () => {} |
-| onMouseup| () => {} |
-| onMousedown| () => {} |
-| onMouseover| () => {} |
-| onMouseout| () => {} |
-| onKeypress| () => {} |
-| onMapLoad| (mapObject) => {} |
+| Event       |   default value   |
+| ----------- | :---------------: |
+| onResize    |     () => {}      |
+| onZoom      |     () => {}      |
+| onMove      |     () => {}      |
+| onClick     |     () => {}      |
+| onDblclick  |     () => {}      |
+| onMouseup   |     () => {}      |
+| onMousedown |     () => {}      |
+| onMouseover |     () => {}      |
+| onMouseout  |     () => {}      |
+| onKeypress  |     () => {}      |
+| onMapLoad   | (mapObject) => {} |
+
+
+## Updates
+
+Now you can Pass Html elements or react components to the title prop of marker 
+```
+title: <h4>{marker title}</h4>
+```
 
 ## Author
 
 - **Harish S Khot**
+
+## Updated by 
+- **Manideep Yelugoti**
 
 ## Acknowledgments
 

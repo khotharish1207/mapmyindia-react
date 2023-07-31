@@ -12,6 +12,8 @@ var _react = _interopRequireDefault(require("react"));
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _lodash = _interopRequireDefault(require("lodash.isequal"));
+var ReactDOMServer =require('react-dom/server');
+
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -141,17 +143,39 @@ var Map = /*#__PURE__*/function (_React$Component) {
           var position = m.position,
               draggable = m.draggable,
               title = m.title,
-              icon = m.icon,
+              tooltip = m.tooltip,
+              // icon = m.icon_url,
               onClick = m.onClick,
               onDragend = m.onDragend;
-          var mk = new L.Marker(position, {
+              // var icon = L.icon({
+              //   iconUrl:m.icon_url,
+              //   iconSize: [24, 24], // adjust the width and height according to your icon size
+              // });
+
+             var icon=L.divIcon(
+              { className: "custom icon", 
+              html: ReactDOMServer.renderToString(m.icon_url) })
+
+            var mk = new L.Marker(position, {
             draggable: draggable,
-            title: title
+            title: title,
+            icon:icon
           });
-          title && mk.bindPopup(title);
+
+          if (title) {
+            var titleContent = ReactDOMServer.renderToString(title);
+            mk.bindPopup(titleContent);
+          }
+
+           if (tooltip) {
+      var tooltipContent = ReactDOMServer.renderToString(tooltip);
+      mk.bindTooltip(tooltipContent);
+    }
+
+          
+
           onDragend && mk.on("dragend", onDragend);
           onClick && mk.on("click", onClick);
-
           _this.map.addLayer(mk);
 
           _this.markers.push(mk);
@@ -210,7 +234,7 @@ Map.defaultProps = {
   location: true,
   search: true,
   zoom: 15,
-  height: "500px",
+  height: "100%",
   width: "100%",
   markers: []
 };
