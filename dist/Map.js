@@ -143,7 +143,7 @@ var Map = /*#__PURE__*/function (_React$Component) {
           var position = m.position,
               draggable = m.draggable,
               title = m.title,
-              tooltip = m.title,
+              tooltip = m.tooltip,
               // icon = m.icon_url,
               onClick = m.onClick,
               onDragend = m.onDragend;
@@ -163,12 +163,12 @@ var Map = /*#__PURE__*/function (_React$Component) {
           });
 
           if (title) {
-            var titleContent = ReactDOMServer.renderToStaticMarkup(title);
+            var titleContent = ReactDOMServer.renderToString(title);
             mk.bindPopup(titleContent);
           }
 
            if (tooltip) {
-      var tooltipContent = ReactDOMServer.renderToStaticMarkup(tooltip);
+      var tooltipContent = ReactDOMServer.renderToString(tooltip);
       mk.bindTooltip(tooltipContent);
     }
 
